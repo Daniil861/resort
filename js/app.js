@@ -73,14 +73,14 @@ if (iconMenu != null) {
 		let targetElement = e.target;
 		if (unlock) {
 			if (targetElement == iconMenu || targetElement.closest('.icon-menu')) {
-				// body_lock(delay);
+				body_lock(delay);
 				iconMenu.classList.toggle("_active");
 				menuBody.classList.toggle("_active");
 			}
 			// Закрываем меню если кликнули не по области меню
 			else if (document.querySelector(".menu__body._active") && !targetElement.closest('.menu__body')) {
 				menu_close();
-				// body_lock(delay);
+				body_lock(delay);
 			}
 		}
 	});
@@ -857,7 +857,7 @@ if ('.villa__slider') {
 	});
 }
 
-// Событие клик на иконку search - открываем / закрываем input
+// Событие клик на иконку header_search - открываем / закрываем input
 const icon_search = document.querySelector('.header__icon-search');
 document.addEventListener('click', (e) => {
 	const targetElement = e.target;
@@ -1337,7 +1337,6 @@ function input_placeholder_add(input) {
 function input_focus_add(input) {
 	input.classList.add('_focus');
 	input.parentElement.classList.add('_focus');
-
 }
 function input_focus_remove(input) {
 	input.classList.remove('_focus');
