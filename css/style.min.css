@@ -901,11 +901,11 @@ body.ie ._ibg img {
 .main {
   position: relative;
   background: url("../img/main/main-img.jpg") center center/cover no-repeat;
-  height: 684px;
+  height: 725px;
 }
 @media (max-width: 1197px) {
   .main {
-    height: calc(550px + 134 * ((100vw - 320px) / 877));
+    height: calc(580px + 145 * ((100vw - 320px) / 877));
   }
 }
 .main::before {
